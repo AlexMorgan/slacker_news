@@ -1,0 +1,134 @@
+body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.content {
+  width: 100%;
+  margin-left: 8%;
+}
+
+/*********************** Navigation Container **************************/
+#navigation {
+  background-color: #ff6600;
+}
+
+#navigation ul {
+  padding: 3px 0 3px 10px;
+}
+
+#navigation li {
+  list-style-type: none;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: .9em;
+  margin-bottom: 1px;
+  padding-bottom: 2px;
+}
+
+#navigation #logo {
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+#login {
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: .9em;
+}
+
+.y-logo {
+  color: white;
+  margin-top: 5px;
+}
+
+/*********************** Feed Container **************************/
+.caret {
+  font-size: .6em;
+  color: grey;
+}
+
+.feed {
+  background-color: #F6F6EF;
+  margin-top: -16px;
+  padding: 1px 0 10px 0;
+}
+
+.feed ol {
+  width: 100%;
+}
+
+.feed-result-title {
+  margin-bottom: -5px;
+  font-size: .9em;
+}
+
+.feed-result-title a {
+  text-decoration: none;
+  color: black;
+}
+
+.feed-result-info {
+  font-size: .6em;
+  font-style: normal;
+  color: grey;
+  margin-left: 1.25%;
+}
+
+.source {
+  font-size: .80em;
+  color: grey;
+}
+
+.item {
+  margin-bottom: 10px;
+}
+
+.more {
+  text-decoration: none;
+  display: inline;
+}
+
+/*********************** Footer Container **************************/
+.footer {
+  border-top: 2px solid #ff6600;
+  background-color: #F6F6EF;
+  margin-top: -16px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.footer-nav li {
+  display: inline-block;
+  list-style-type: none;
+  font-size: .8em;
+}
+
+.post {
+  font-size: .9em;
+  color: grey;
+}
+
+.description {
+  width: 35%;
+  height: 70px;
+  margin-top: 10px;
+}
+
+.posting {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.submit {
+  margin-top: 10px;
+  width: 100px;
+  height: 70px;
+}
