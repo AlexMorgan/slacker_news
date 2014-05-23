@@ -16,6 +16,10 @@ body {
   background-color: #ff6600;
 }
 
+.inline {
+  display: inline;
+}
+
 #navigation ul {
   padding: 3px 0 3px 10px;
 }

@@ -10,6 +10,7 @@
   <body>
     <div class="content">
       <div id="navigation">
+        <div></div>
           <ul>
             <li><img src="logo.gif" class="y-logo" border=1> </li>
             <li id="logo">Slacker News</li>
@@ -56,6 +57,10 @@
           <li>Apply | </li>
           <li>Library</li>
         </ul>
+
+        <% if !@error.nil? %>
+          <p><%= @error %></p>
+        <% end %>
 
         <h3>Post an article:</h3>
         <form action='/post_art' method="post">

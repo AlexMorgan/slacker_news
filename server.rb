@@ -28,6 +28,9 @@ post '/post_art' do
   url = params['url']
   description = params['description']
 
+  # Check to make sure that the user has filled out all the proper information
+
+
   CSV.open('feed.csv', 'a') do |row|
     row << [title,domain,url,description]
   end
