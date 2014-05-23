@@ -1,6 +1,38 @@
 require 'csv'
 require 'pry'
 require 'sinatra'
+require 'redis'
+
+# Returns a connection to the appropriate Redis server
+def get_connection
+  if ENV.has_key?("REDISCLOUD_URL")
+    Redis.new(url: ENV["REDISCLOUD_URL"])
+  else
+    Redis.new
+  end
+end
+
+# Retrieves all articles from the database
+def find_articles
+  redis = get_connection
+  # Grabes the articles, starting with the first one, and ending with the last one (0, -1_
+  serialized_articles = redis.lrange("slacker:articles", 0, -1)
+
+  articles = []
+  serialized_articles.each do |article|
+    articles << JSON.parse(article, symbolize_names: true)
+  end
+
+  articles
+end
+
+# Persists a new article
+def save_article(url, title, description)
+  article = { url: url, title: title, description: description, domain: domain }
+
+  redis = get_connection
+  redis.rpush("slacker:articles", article.to_json)
+end
 
 def read_from_csv(file)
   articles = []
